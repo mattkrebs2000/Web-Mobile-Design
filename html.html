@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body class="">
+        <div class="c-site-container">
+            <header>
+      <div class="l-wrap">
+        <nav class="c-main-nav l-wrap__full">
+          <div>
+            <a class="c-main-nav__logo" href="/about">
+              <div class="o-zell"><svg id="zell" viewBox="0 0 90 30">
+      <title> Zell </title>
+      <g>
+        <g class="z">
+          <path class="o-zell__bar" d="M0 0v6.332h24.336L24.384 0z"/>
+          <path class="o-zell__text" d="M24.336 6.332h-8.154L0 23.425v6.332h24.336v-6.38H9.562z"/>
+        </g>
+        <path class="e o-zell__text" d="M45.706 29.757v-5.34H34.657v-3.614h9.194v-4.941h-9.194V12.28h11.05V6.956H27.893v22.801z"/>
+        <path class="l1 o-zell__text" d="M68.124 29.757v-5.9H57.938V6.956h-7.275v22.801z"/>
+        <path class="l2 o-zell__text" d="M89.646 29.757v-5.9H79.461V6.956h-7.276v22.801z"/>
+      </g>
+    </svg>
+    </div>
+            </a>
+          </div><div class="main-nav jsNavContainer">
+        <a href="https://learnjavascript.today" class="o-navlink">Learn JavaScript</a>
+        <a href="/about" class="o-navlink">About</a>
+        <a href="/blog" class="o-navlink">Articles</a>
+        <a href="/contact" class="o-navlink">Contact</a>
+        <a href="/newsletter" class="o-navlink">Newsletter</a>
+    
+        <button
+        class="button c-main-nav__toggle jsOffsiteLauncher">Menu</button>
+      </div>
+        </nav>
+      </div>
+    </header>
+    
+    
+          <main>
+    <div class="l-wrap">
+      <article class="o-content post-layout">
+        <h1>9 Important CSS Properties You Must Know</h1>
+        <span class="post-layout__date">5th May 2013</span>
+    
+        
+        
+    <p>CSS can be seem to be difficult at a first glance when you’re new to it. You may be confused about the different CSS properties, what they do and what they are for. Don’t worry, I got you covered.</p>
+    <p>Have you heard of the 80/20 rule where 80% of the results come from 20% of the effort? Its the same in CSS. Which is why in this post, I’m going to talk about the most highly used CSS properties you will definitely need to know.</p>
+    <p>Its going to be a post packed full of information. Lets dig in.</p>
+    <!--more-->
+    <img src="/images/2013/05/9-important-CSS-properties-you-must-know.jpg" alt="9-important-CSS-properties-you-must-know" width="593" height="381" class="aligncenter size-full wp-image-164" />
+    <h2 id="1%3A-display">1: Display</h2>
+    <p>Display takes on many different values, but only 4 are most commonly used.</p>
+    <pre><code>div {
+        display: block;
+        display: inline-block;
+        display: inline;
+        display: none;
+    }
+    </code></pre>
+    <ul>
+    <li>
+    <p><strong>block:</strong> Many HTML elements are set to this mode of display by browsers’ stylesheets. They include <code>&lt;div&gt;</code>, <code>&lt;ul&gt;</code> and text blocks like <code>&lt;p&gt;</code>. Block level elements by default take up as much space as they can, and they cannot be placed on the same horizontal line with any other display modes, include other block elements. (Exception: unless they are floated)</p>
+    <p>With block elements, you gain the ability to alter the element’s width and height to your liking, which is why they are <a href="https://zellwk.com/blog/layouts-of-a-website/" title="used for layouts">used for layouts</a></p>
+    </li>
+    <li>
+    <p><strong>inline:</strong> The inline mode wraps many HTML elements tighty around them and is the defaults for all elements that are not specified with any other display values. Elements can be placed side by side on the same line as inline elements. Think about the <code>&lt;strong&gt;</code> tag that <strong>bolds elements</strong>, the <code>&lt;em&gt;</code> tag that creates <em>italics</em> and <code>&lt;a&gt;</code> tags that allow you to link to other web pages. These are all examples of inline elements. You will not be able to change an inline element’s width and height.</p>
+    </li>
+    <li>
+    <p><strong>inline-block</strong>: This is one display value that combines the properties of both block elements and inline elements. You get the ability to set a height and width, and the element can appear on the same horizontal line as other elements.</p>
+    </li>
+    <li>
+    <p><strong>none</strong>: Display none hides the element from the website and it will not be shown visually. This is very useful for CSS Dropdown menus where additional options appear when you hover on navigation menus. The rationale is that elements are set to a display value of none initially,  and the display value is changed to block on hover.</p>
+    </li>
+    </ul>
+    <p><img src="/images/2013/05/display-values.jpg" alt="Display values" title="Display values"></p>
+    <p>Other display values can be found on the <a href="https://www.w3schools.com/cssref/pr_class_display.asp" title="W3 Schools Display values">W3 Schools website</a></p>
+    <h2 id="2%3A-width-and-height">2: Width and Height</h2>
+    <p>Width and height properties are used closely with display:block and display:inline to set the width and height of HTML elements while creating a website. Common units units for Width and Height are:</p>
+    <ul>
+    <li><strong>px</strong> - Pixels.</li>
+    <li><strong>em</strong> - A unit of measurement, where 1 em = current font size.</li>
+    <li><strong>rem</strong> - Root em. Same measurement as em, but makes life much easier without the inheritance problem</li>
+    <li><strong>%</strong> - Percentages.</li>
+    <li><strong>auto</strong> - highly useful unit, will explain below.</li>
+    </ul>
+    <p>Other units of measurement can be found at the <a href="https://www.w3schools.com/cssref/css_units.asp" title="W3 Schools CSS units ">W3 Schools website</a>. If you’re wondering about the difference between px, em and rem, check out this great article on <a href="http://snook.ca/archives/html_and_css/font-size-with-rem" title="font sizing with rem">font sizing with rem by Jonathan Snook</a></p>
+    <p>Extremely useful properties like max-width, min-width, max-height and min-height come into play as well when you’re making responsive websites. Here’s one example of how auto and max-width can be used to make sure images fit tightly and snugly into available space:</p>
+    <pre><code>img {
+        max-width: 100%;
+        height: auto;
+    }
+    </code></pre>
+    <h2 id="3%3A-margin-and-padding">3: Margin and Padding</h2>
+    <p>Margins are paddings are things that will definitely appear. Knowing how these things work will be extremely beneficial when writing CSS.</p>
+    <p>Margins and Paddings dictate the spaces between elements on your website. They are very similar and have the same units as Width and Height mentioned above.</p>
+    <p>The only difference between margins and paddings is the area the exert control over. Margins affect the area outside of borders whereas paddings affect areas inside the border. It is useful to refer to the box model below:</p>
+    <p><img src="/images/2013/05/box-model.jpg" alt="CSS Box Model" title="CSS Box Model"></p>
+    <p>Ordinarily, margins are written in this manner:</p>
+    <pre><code>div{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left: 10px
+    }
+    </code></pre>
+    <p>They can be written in shorthand to simplify the lines of codes and make it easier to read. In fact, shorthands are the standard practice and you should know them. Here’s a quick explanation:</p>
+    <pre><code>div{
+       margin: 20px 10px 20px 10px;
+       /*  This shorthand refers to TOP, Right, Bottom, Left. Its easier to picture a clock at 12, 3, 6 and 9 respectively */
+    
+       margin: 20px 10px 20px;
+       /* This refers to Top, Left and Right, Bottom */
+    
+       margin: 20px 10px;
+       /* This refers to Top and Bottom, Left and Right */
+    
+       margin: 20px;
+       /* This refers to 20px worth of margin on all 4 sides */
+    }
+    </code></pre>
+    <p><strong>Extra tip:</strong> margins with auto on the left and right are used to center an element with a display value of block. Its written simply as:</p>
+    <pre><code>div {
+       margin: 0 auto;
+    }
+    </code></pre>
+    <h2 id="4%3A-border">4: Border</h2>
+    <p>Borders are… borders. I’m pretty sure you don’t need an explanation of what borders are.</p>
+    <p>Borders have 3 different properties that you have take care of:</p>
+    <ul>
+    <li><strong>border-width</strong> – width of the border. Same units as width and height</li>
+    <li><strong>border-style</strong> – style of the border. Usual values are solid and dashed. For a complete list, take a look at <a href="https://www.w3schools.com/cssref/pr_border-style.asp" title="W3 Schools Border Styles">W3 Schools Website</a></li>
+    <li><strong>border-color</strong> – color of the border. Hex, and rgb values can be used.</li>
+    </ul>
+    <p>Instead of writing the longer version, you could declare the border shorthand in this way:</p>
+    <pre><code>div{
+        border: 1px solid black;
+        /* border width, style and color */
+    }
+    </code></pre>
+    <p>Likewise to margins and paddings, borders refer to all 4 sides. If you are only interested in applying borders to 1 or 2 sides, I generally prefer to stick by border-top, border-bottom, border-left or border-right.</p>
+    <h2 id="5%3A-floats">5: Floats</h2>
+    <p>Floats are one of the core elements in today’s website. If you see two columns of text side by side, a sidebar / content configuration like what you see on my blog if your browser window is above 800px, you have noticed floats in action. Another commonly used area for floats are navigation items.</p>
+    <p>In the nutshell, what float simply does it to position the edge of the targeted HTML content at the edge of one side of the parent container. Subsequent floats will then be placed at the edge of your first floated content. (depending on whether you float it left or right)</p>
+    <p>Floats have 3 basic properties that you might use often:</p>
+    <ul>
+    <li><strong>left</strong></li>
+    <li><strong>right</strong></li>
+    <li><strong>none</strong> - removes the float</li>
+    </ul>
+    <p>You may want to check out the this post on <a href="http://coding.smashingmagazine.com/2007/05/01/css-float-theory-things-you-should-know/" title="float theory">float theory</a> as well</p>
+    <h2 id="7%3A-color">7: Color</h2>
+    <p><strong>Color</strong> here refers to text color. It takes on a #hex value or a rgb value as with border colors.</p>
+    <h2 id="8%3A-background">8: Background</h2>
+    <p><strong>Background</strong> refers to the background of the HTML element. Like many CSS properties, <code>background</code> has a shorthand to it as well.</p>
+    <pre><code>body {
+        background:transparent image-url('image.png') left top no-repeat;
+        /* All background definitions are option, but at least one must be stated. The above are default values given to background if you have left anything undefined */
+    }
+    </code></pre>
+    <p>Here are the explanations for the background properties in order from left to right:</p>
+    <ul>
+    <li>
+    <p><strong>background-color:</strong> color of the background. Takes #hex value or an rgb value</p>
+    </li>
+    <li>
+    <p><strong>background-image:</strong>  url(URI). Takes on the path to your image. Use the example above if the image is in the same folder.</p>
+    <p>To go down one folder, simple type the file name before the image.png. Example: css/image.png.</p>
+    <p>To go up one folder, type the file name with “…/”. Example: …/css/image.png</p>
+    </li>
+    <li>
+    <p><strong>background-repeat:</strong> whether you would like the background to repeat if the width exceeds the background size. Other values are repeat, repeat-x and repeat-y.</p>
+    </li>
+    <li>
+    <p><strong>background-position:</strong> position of the background relative to the HTML element. Two values are needed here, X and Y, where X is the amount of offset from the left and Y is the amount of offset from the top. Takes on either unit values (as with width and height) or left,center,right and top,center,bottom for left and right respectively.</p>
+    </li>
+    </ul>
+    <h2 id="9%3A-font">9: Font</h2>
+    <p>Fonts in general refer to the appearance of text in your website. There are a few things to look out for. Like other properties, font has a shorthand. Do note that it is common to see the font shorthand declaration only once in the whole CSS file. It is common to use the different properties at other times:</p>
+    <pre><code>body {
+        font: italic small-caps bold 20px/1.5 &quot;Proxima Nova&quot;, helvetica, arial, sans-serif;
+        /* font shorthand */
+    }
+    </code></pre>
+    <p>Here are the explanations for the font properties in order from left to right:</p>
+    <ul>
+    <li>
+    <p><strong>font-style</strong>: Style of the font. valid values are either italic or normal. Defaults to normal. Optional property in font shorthand</p>
+    </li>
+    <li>
+    <p><strong>font-variant:</strong> variant of the font. valid values are normal and small caps. Defaults to normal. Optional property in font shorthand and is not often used</p>
+    </li>
+    <li>
+    <p><strong>font-weight:</strong> weight of font. determines if text is bold. valid values are normal, bold, bolder, or 100 - 900. Optional property in font shorthand</p>
+    </li>
+    <li>
+    <p><strong>font-size:</strong> size of font. Takes a value thats the same as width and height</p>
+    </li>
+    <li>
+    <p><strong>line-height:</strong> determines the amount of space above and below the text. Very important to ensure good readability. Takes on the same values as font, and also a unitless value. If a unitless value is used, it means the line height is a multiple of the value provided.</p>
+    </li>
+    <li>
+    <p><strong>font-family:</strong> area to declare typefaces and fontstack that you would like to use.</p>
+    </li>
+    </ul>
+    <h2 id="conclusion">Conclusion</h2>
+    <p>Thats it. Listed above are the 9 CSS properties that you absolutely must know. What’s left for you to do now is to keep this page somewhere as a backup if you are unsure of the important CSS properties you need to remember. If you found this post useful, please do me a favor and share it with others over twitter or facebook.</p>
+    <p>Now code away!</p>
+    
+        
+          <p>If you enjoyed this article, please support me by sharing this article <a href="https://twitter.com/share?text=9%20Important%20CSS%20Properties%20You%20Must%20Know by @zellwk 👇 &url=https://zellwk.com/blog/9-important-css-properties-you-must-know/" target="_blank" rel="noopener">Twitter</a> or <a href="https://zellwk-com.ck.page/products/zell">buying me a coffee</a> 😉. If you spot a typo, I’d appreciate if you can <a href="https://github.com/zellwk/zellwk.com/blob/master/./src/posts/2013-05-05-9-css-props.md">correct it on GitHub</a>. Thank you!</p>
+    
+        
+      </article>
+    
+      <div class="ck-unsubcribed-content">
+        <div class="post-layout">
+          <section id="convertkit" class="o-content c-ck ck-layout jsCkForm">
+    
+    
+    <script defer id="_ck_2568203" src="https://forms.convertkit.com/2568203?v=6"></script></section>
+        </div>
+      </div>
+    
+      
+      
+    </div>
+    
+    <div class="l-wrap">
+      <div class="post-layout">
+        <nav class="post-nav">
+          
+    
+              <a class="button" data-type="outline" href="/blog/creating-a-clean-and-simple-website-part-1-html/" data-link-to="previous-post">
+                  <svg height="1em" viewbox="0 0 22 38">
+                    <path fill="currentColor" d="M18.9 38l3.1-3.1L6.1 19 22 3.1 18.9 0 0 19z"></path>
+                  </svg>
+                  <span>Creating a clean and simple website (Part 1 – HTML)</span>
+                </a>
+              <a class="button" data-type="outline" href="/blog/creating-a-clean-and-simple-website-part-2-styling-the-header/" data-link-to="next-post">
+                  <span>Creating a clean and simple website (Part 2 – Styling the header)</span>
+                  <svg height="1em" viewbox="0 0 22 38">
+                    <path fill="currentColor" d="M3.1 0L0 3.1 15.9 19 0 34.9 3.1 38 22 19z"></path>
+                  </svg>
+                </a>
+              </nav>
+      </div>
+    </div>
+    </main><footer class="c-footer" role="contentinfo">
+      <div class="l-wrap">
+        <div class="l-wrap__full l-footer__wrap">
+          <div class="c-footer__cta">
+            <ul class="c-footer__nav">
+              <li>
+                <span>About Zell</span>
+                <ul>
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact</a>
+                  </li>
+                </ul>
+              </li>
+    
+              <li>
+                <span>Things I made</span>
+                <ul>
+                  <li>
+                    <a href="/products#course-section">Courses</a>
+                  </li>
+                  <li>
+                    <a href="/products#library-section">Libraries</a>
+                  </li>
+                </ul>
+              </li>
+    
+              <li>
+                <span>Newsletter</span>
+                <ul>
+                  <li>
+                    <a href="/newsletter">Email</a>
+                  </li>
+                  <li>
+                    <a href="/rss">RSS</a>
+                  </li>
+                </ul>
+              </li>
+    
+              <li>
+                <span>Social Media</span>
+                <ul>
+                  <li>
+                    <a href="https://twitter.com/zellwk">Twitter</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/zellwk">Github</a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/c/zellwk">Youtube</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+    
+          <div class="c-footer__info">
+            <p>
+              <span>
+                © 2022 <a href="/blog">Zell Liew</a>
+                · <a href="/terms">Terms</a>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div><div class="c-offsite-container jsOffsiteContainer">
+      <div class="c-offsite">
+        <div class="c-offsite__header">
+          <a class="c-main-nav__logo" href="/about">
+            <div class="o-zell--white"><svg id="zell" viewBox="0 0 90 30">
+      <title> Zell </title>
+      <g>
+        <g class="z">
+          <path class="o-zell__bar" d="M0 0v6.332h24.336L24.384 0z"/>
+          <path class="o-zell__text" d="M24.336 6.332h-8.154L0 23.425v6.332h24.336v-6.38H9.562z"/>
+        </g>
+        <path class="e o-zell__text" d="M45.706 29.757v-5.34H34.657v-3.614h9.194v-4.941h-9.194V12.28h11.05V6.956H27.893v22.801z"/>
+        <path class="l1 o-zell__text" d="M68.124 29.757v-5.9H57.938V6.956h-7.275v22.801z"/>
+        <path class="l2 o-zell__text" d="M89.646 29.757v-5.9H79.461V6.956h-7.276v22.801z"/>
+      </g>
+    </svg>
+    </div>
+          </a>
+          <a href="#" class="c-offsite__close jsOffsiteClose">&times;</a>
+        </div>
+        <div class="c-offsite__content"><nav class="c-offsite__nav">
+        <a href="/about" class="o-navlink--offsite">About</a>
+        <a href="/blog" class="o-navlink--offsite">Articles</a>
+        <a href="/newsletter" class="o-navlink--offsite">Newsletter</a>
+        <a href="/contact" class="o-navlink--offsite">Contact</a>
+      </nav></div>
+      </div>
+    </div>
+    <div class="c-modal-container jsModalContainer">
+      <div class="l-wrap">
+        <div class="c-modal jsModal jsLoader">
+          <h3 class="c-modal__title jsModalTitle jsLoaderTitle">Hold on while i sign you up&hellip;</h3>
+    
+          <div class="c-modal__content c-post">
+            <div class="c-loader">
+              <div class="c-loader__spinner-container">
+                <div class="c-loader__spinner o-spinner jsSpinner">
+                  <div class="o-spinner__item--pink"></div>
+                  <div class="o-spinner__item"></div>
+                  <div class="o-spinner__item"></div>
+                </div>
+                <div class="c-loader__success-icon jsSuccessIcon">🤗</div>
+              </div>
+    
+              <div class="c-loader__messages jsLoaderMessages jsModalMessages">
+                <div class="jsModalSuccessText">Woohoo! You&rsquo;re in!</div>
+                <div>Now, hold on while I redirect you.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+        
+        
+          <script module src="/js/main-ce391bea7f.mjs"></script>
+          <script nomodule src="/js/main-legacy-5130a774d8.js"></script>
+    
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-FF5QLS3KNY"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+    
+            gtag('js', new Date());
+            gtag('config', 'G-FF5QLS3KNY');
+          </script>
+    
+          <!-- Hotjar Tracking Code for https://zellwk.com -->
+          <script defer>
+            (function (h, o, t, j, a, r) {
+              h.hj = h.hj || function () {
+                (h.hj.q = h.hj.q || []).push(arguments)
+              };
+              h._hjSettings = {
+                hjid: 500360,
+                hjsv: 6
+              };
+              a = o.getElementsByTagName('head')[0];
+              r = o.createElement('script');
+              r.async = 1;
+              r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+              a.appendChild(r);
+            })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+          </script>
+      
+</body>
+</html>
